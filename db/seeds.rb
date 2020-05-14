@@ -23,9 +23,6 @@ puts "read api"
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-Cocktail.create(name: "Vodka Soda")
-Cocktail.create(name: "Martini")
-Cocktail.create(name: "Moscow Mule")
 puts "finished"
 
 

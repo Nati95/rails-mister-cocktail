@@ -1,7 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://image.stern.de/7272754/16x9-940-529/5a50750c5c27d4fe7f1b09f88d46ddae/Nh/cocktails.jpg);">
+  <div class="container">
+    <h1>The <strong>best Cocktails</strong>!</h1>
+    <p>Change your life and try these beauties.</p>
+  </div>
+</div>
+
+
   <h1>All my Cocktails</h1>
     <% @cocktails.each do |cocktail| %>
           <h2><%= cocktail.name %></h2>
+<%= cl_image_tag cocktail.photo.key, height: 200, width: 100, crop: :fill %>
           <p><%= link_to "Details", cocktail_path(cocktail) %></p>
     <% end %>
-
-  <h5><%= link_to "Create a new cocktail", new_cocktail_path %></h5>

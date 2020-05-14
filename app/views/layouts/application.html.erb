@@ -13,8 +13,27 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://cdn.clipart.email/c1c15ad982f1e451bc6a6a1ac76d973a_cocktail-clipart-cocktail-shaker-cocktail-cocktail-shaker-_1600-1600.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <%= link_to 'Back to all cocktails', cocktails_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Create a new cocktail", new_cocktail_path, class: "btn btn-primary mb-3" %>
+      </li>
+    </ul>
+  </div>
+</div>
       <%= yield %>
-    </div>
   </body>
 </html>
