@@ -1,17 +1,13 @@
-<h1><%= @cocktail.name %></h1>
-
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 200, crop: :fill %>
-
-<ul>
-  <% @cocktail.doses.each do |dose|  %>
-    <li>
-      <%= dose.ingredient.name %> : <%= dose.description %> <%= link_to "remove", dose, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary mb-3" %> </br>
-
-
-
-
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 200, crop: :fill %>
+  <ul>
+    <% @cocktail.doses.each do |dose|  %>
+      <li>
+        <%= dose.ingredient.name %> : <%= dose.description %> <%= link_to "remove", dose, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary mb-3" %> </br>
+</div>
 
